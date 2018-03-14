@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang-"en">
+{% include "header.html" %}
+<h1>Hello World!</h1>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, inistial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>First flask app</title>
-	<link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
-</head>
+<a href="/me">click here for new HTML file</a>
 
-<body>
-	<h1>Hello World!</h1>
+<form action="/feedback" method="post">
+	<label for="name">Name: </label>
+	<input type="text" name="name" id="name">
+
+	<label for="email">Email: </label>
+	<input type="email" name="email" id="email">
+
+	<input type="submit" name="Send!">
+</form>
+
 </body>
 
 </html>
